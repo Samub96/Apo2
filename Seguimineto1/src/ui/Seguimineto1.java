@@ -116,22 +116,41 @@ public class Seguimineto1 {
 	/*
 	 * punto 5
 	 */
-	public static double div() {
-		return 1.0;
-	}
+	public static int divide(int dividendo, int divisor, int cociente) {
+	    if (dividendo < divisor) {
+	      return cociente;
+	    } else {
+	      return divide(dividendo - divisor, divisor, cociente + 1);
+	    }
+	  }
 	
 	/*
 	 * punto 6
 	 */
 	
-	public static int mcd() {
-		return 1;
+	public static int mcd( int a, int b) {
+		
+		if (b == 0) {
+			
+			return a;
+		}
+		
+		return mcd(b, a % b);
+		
+	
 	}
 	
 	/*
 	 * punto 7
 	 */
-	public static int cash() {
+	public static int cash(int target) {
+		
+		
+		if (target == 0) {
+			return target;
+			
+		}
+		
 		
 		return 1;
 	}
@@ -147,6 +166,11 @@ public class Seguimineto1 {
 //		String str = "hello world" ;
 //		String reverse = revertir(str);
 //		System.out.print(reverse);
+//		int dividend = 15;
+//	    int divisor = 3;
+//	    System.out.println("Cociente: " + divide(dividend, divisor, 0));
+//	    System.out.println("Residuo: " + (dividend - divisor * divide(dividend, divisor, 0)));
+	  
 
 	}
 
