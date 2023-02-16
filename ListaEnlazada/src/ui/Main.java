@@ -7,19 +7,12 @@ public class Main {
 	public static void main(String[] args) {
 		
 		 simpleLinkedList = new SimpleLinkedList();
-		 
-		  Node root = simpleLinkedList.getRoot();
 
+	        simpleLinkedList.addNodeAtEnd(simpleLinkedList.getRoot(), 1);
+	        simpleLinkedList.addNodeAtEnd(simpleLinkedList.getRoot(), 2);
+	        simpleLinkedList.addNodeAtEnd(simpleLinkedList.getRoot(), 3);
+	        simpleLinkedList.addNodeAtEnd(simpleLinkedList.getRoot(), 4);
+	        simpleLinkedList.deleteNode(simpleLinkedList.getRoot(), 4);
 	        simpleLinkedList.getList(simpleLinkedList.getRoot());
-
-	        simpleLinkedList.addNodeAtEnd(root, 1);
-	        simpleLinkedList.addNodeAtEnd(root, 2);
-	        simpleLinkedList.addNodeAtEnd(root, 2);
-	        simpleLinkedList.addNodeAfter(root,15, 20);
-
-
-	        simpleLinkedList.getList(simpleLinkedList.getRoot());
-
-	}
-
+}
 }
