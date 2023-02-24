@@ -2,7 +2,7 @@
  * 
  */
 /**
- * @author Family
+ * @author Samuel Barona
  *
  */
 module Seguimineto3 {

@@ -14,19 +14,19 @@ public class ListaCircular {
 	        addNode(new Node(head.getPrevious().getName()+1));
 	    }
 
-	    private void addNode(Node node){
+	    private void addNode(Node pointer){
 
 	        if(head == null){
-	            head = node;
+	            head = pointer;
 	            head.setNext(head);
 	            head.setPrevious(head);
 	            turno = head;
 	        }else{
 	            Node tail = head.getPrevious();
-	            node.setNext(head);
-	            head.setPrevious(node);
-	            tail.setNext(node);
-	            node.setPrevious(tail);
+	            pointer.setNext(head);
+	            head.setPrevious(pointer);
+	            tail.setNext(pointer);
+	            pointer.setPrevious(tail);
 	        }
 	    }
 
@@ -44,20 +44,20 @@ public class ListaCircular {
 	        }
 	    }
 
-	    private String printActual(Node current){
+	    private String printActual(Node pointer){
 	        String msg;
-	        if(current == turno){
-	            msg = "Turno actual: " + current.getName();
+	        if(pointer == turno){
+	            msg = "Turno actual: " + pointer.getName();
 	            return msg;
 	        }
-	        return printActual(current.getNext());
+	        return printActual(pointer.getNext());
 	    }
 
 	    public String pasarTurno(){
 	        return pasarTurno(turno);
 	    }
 
-	    public String pasarTurno(Node current){
+	    private String pasarTurno(Node current){
 	        if(head == null) {
 	            return "No se han registrado turnos";
 	        }
