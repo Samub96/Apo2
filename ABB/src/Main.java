@@ -9,7 +9,7 @@ public class Main {
         tree.addNode(4);
         tree.addNode(6);
         tree.addNode(10);
-//        tree.print();
+        tree.print();
 
 
     }
