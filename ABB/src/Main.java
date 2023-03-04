@@ -10,8 +10,8 @@ public class Main {
         tree.addNode(6);
         tree.addNode(12);
         tree.inOrden();
-        tree.deleteNode(5);
-        tree.inOrden();
+//        tree.deleteNode(5);
+        tree.postOrden();
 
     }
 }

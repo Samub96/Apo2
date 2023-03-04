@@ -16,7 +16,6 @@ public class Main {
 
                      [1] Add name
                      [2] Show
-                     [3] debug
                      [0] exit \
                     """);
 
@@ -37,11 +36,9 @@ public class Main {
 
                 break;
             case 2:
-                tree.printTree();
+                tree.printTreeReverse();
                 break;
-            case 3:
 
-                break;
 
             case 0:
                 exit = true;
@@ -70,7 +67,7 @@ public class Main {
             case 1:
 
 
-
+//andres carlos daniela nicolas pablo wiliam
                 break;
             case 2:
                 for (int i =0;i<array.length-1;i++){
