@@ -4,7 +4,9 @@ public class Arbol {
 private Node root;
 
     public void addNode(String[] array) {
-        // crear arbol vacio
+
+
+
         if(root == null){
             root = new Node((array.length/2)-1);
         }else {
@@ -32,6 +34,19 @@ private Node root;
                 addNode(pointer.getRight(),newNode);
             }
         }
+
+    }
+    private void printTree(Node pointer){
+        if(pointer != null){
+            printTree(pointer.getLeft());
+            System.out.println(pointer.getValue());
+            printTree(pointer.getRight());
+        }
+
+    }
+    public void printTree(){
+        printTree(root);
+        System.out.println();
 
     }
 }
